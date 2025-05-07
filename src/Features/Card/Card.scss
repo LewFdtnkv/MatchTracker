@@ -1,0 +1,43 @@
+.content{
+    background-color: #0B0E12;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        border-radius: var(--border-radius);
+        
+        height: 87px;
+        padding: 16px;
+        font-size: var(--font-size);
+        color: #ffffff;
+        font-family: var(--inter-font);
+        font-weight: var(--font-weight);
+        &-leftCommand{
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        &-rightCommand{
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        &-score{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
+    }
+    &__card{
+        // background-color: #101318;
+        display: flex;
+        justify-content: space-between;
+        gap: 32px;
+        padding: 12px 24px;
+    }
+}

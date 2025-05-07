@@ -1,0 +1,29 @@
+:root{
+    --inter-font:'Inter', sans-serif;
+    --red-color: #EB0237;
+    --green-color: #43AD28;
+    --background-color: #0B0E12;
+    --widget-color: #101318; 
+    --title-font: 'Tactic Sans', sans-serif;
+    --gray-color: #FAFAFA;
+    --light-color: #B4B5B6;
+    --font-weight: 500;
+    --font-size: 16px;
+    --border-radius: 4px;
+    --orange-color: #EB6402;
+}
+*{
+    box-sizing: border-box;
+    user-select: none
+}
+body, header {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+  }
+ul{
+     margin: 5px 0;
+}
+li{
+    list-style: none;
+}

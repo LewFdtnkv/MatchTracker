@@ -1,0 +1,12 @@
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 6px;
+    height: 27px;
+    font-family: var(--inter-font);
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: var(--font-weight);
+    border-radius: var(--border-radius);
+}
