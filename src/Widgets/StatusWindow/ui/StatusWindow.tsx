@@ -1,16 +1,25 @@
 import { useState } from "react";
-import { statuses } from './Statuses';
 import { CaretUpOutlined, CaretDownOutlined } from '@ant-design/icons';
-import '../../App/App.scss'
+import '../../../App/ui/App.scss'
 import './StatusWindow.scss'
+import { useSelector, useDispatch } from "react-redux";
+import type { RootState } from "../../../App/providers/StoreProvider/config/store";
+import { handleChangeStatus } from "../../../App/providers/StoreProvider/config/Status/status";
+import { Status } from "../../../App/providers/StoreProvider/config/Status/StatusTypes";
+
 export default function StatusWindow() {
-    const [status, setStatus] = useState<statuses>(statuses.Default);
+    const status = useSelector((state: RootState)=>state.status.status);
+    const dispatch = useDispatch();
     const [active, setActive] = useState<boolean>(false);
 
     const getStatusValues = () => {
-        return Object.values(statuses).filter(
+        return Object.values(Status).filter(
             (value) => typeof value === 'string'
-        ) as statuses[];
+        ) as Status[];
+    };
+    
+    const toggleStatus = (newStatus: Status) => {
+        dispatch(handleChangeStatus(newStatus));
     };
 
     return (
@@ -37,7 +46,7 @@ export default function StatusWindow() {
                             key={statusValue}
                             className="change__status-status"
                             onClick={() => {
-                                setStatus(statusValue);
+                                toggleStatus(statusValue);
                                 setActive(false);
                             }}
                         >

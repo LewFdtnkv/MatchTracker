@@ -1,6 +1,6 @@
 import Button from "../../Features/Button/Button";
 import RefreshWindow from "../RefreshWindow/RefreshWindow";
-import StatusWindow from "../StatusWindow/StatusWindow";
+import StatusWindow from "../StatusWindow/ui/StatusWindow";
 import './Header.scss';
 
 export default function Header() {

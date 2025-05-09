@@ -1,5 +1,5 @@
 import './RefreshWindow.scss'
-import '../../App/App.scss'
+import '../../App/ui/App.scss'
 export default function RefreshWindow() {
   return (
     <div className="notification">
