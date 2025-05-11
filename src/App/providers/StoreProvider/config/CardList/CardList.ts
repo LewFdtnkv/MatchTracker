@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import type { CardsState } from './CardListTypes';
 import { results } from '../../../../../Widgets/ResultWindow/ResultTypes';
+import {FetchData} from '../extraReducer/FetchData';
 
 const initialState: CardsState = {
   cards: [
@@ -86,6 +87,16 @@ const cardSlice = createSlice({
       state.cards[cardIndex].active = !state.cards[cardIndex].active
        
     }
+  },
+  extraReducers: (builder)=>{
+    builder
+    // .addCase(FetchData.pending, (state)=>{})
+    .addCase(FetchData.fulfilled, (state, action)=>{
+      state.cards.push(action.payload);
+    })
+    .addCase(FetchData.rejected, (state, action)=>{
+      console.error('Нет данных для добавления', action.error.message)
+    })
   }
 });
 
