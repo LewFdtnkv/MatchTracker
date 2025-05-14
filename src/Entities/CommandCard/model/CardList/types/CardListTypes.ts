@@ -1,5 +1,4 @@
-import type { results } from "../../../../../Widgets/ResultWindow/ResultTypes";
-
+import type { results } from "../../../../../Shared/ResultWindow/index"
 export interface Player {
     name: string;
     kills: number;

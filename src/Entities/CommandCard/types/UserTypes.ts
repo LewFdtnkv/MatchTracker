@@ -1,4 +1,4 @@
-import type { Team } from "../../App/providers/StoreProvider/config/CardList/CardListTypes";
+import type { Team } from "../../CommandCard/index";
 
 export interface User{
     name: string,

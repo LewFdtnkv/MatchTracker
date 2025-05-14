@@ -1,8 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit';
-import cardReducer from './CardList/CardList';
-import statusReducer from './Status/status';
-import type { CardsState } from './CardList/CardListTypes';
-import type { Status} from './Status/StatusTypes';
+import cardReducer from '../../../../Entities/CommandCard/model/CardList/slice/CardList';
+import statusReducer from '../../../../Widgets/StatusWindow/model/slice/status';
+import type { CardsState } from '../../../../Entities/CommandCard/index';
+import type { Status} from '../../../../Widgets/StatusWindow/index';
 
 export interface RootState {
   cards: CardsState;

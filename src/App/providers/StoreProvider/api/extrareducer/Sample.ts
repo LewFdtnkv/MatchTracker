@@ -1,5 +1,5 @@
-import { results } from "../../../../../Widgets/ResultWindow/ResultTypes";
-import type { Card, Player, Team } from "../CardList/CardListTypes";
+import { results } from "../../../../../Shared/ResultWindow/index";
+import type { Card, Player, Team } from "../../../../../Entities/CommandCard/index";
 
 const getRandomStatus = (): results => {
   const statuses: results[] = [
@@ -28,9 +28,15 @@ const generateRandomTeam = (): Team => {
   };
 };
 
-export const generateRandomCard = (): Card => ({
-  status: getRandomStatus(),
-  score: `${Math.floor(Math.random() * 5)} : ${Math.floor(Math.random() * 5)}`,
-  active: Math.random() > 0.5, 
-  teams: Array.from({ length: 2 }, generateRandomTeam), 
-});
+export const generateRandomCard = (): Card => {
+    const status = getRandomStatus();
+    let team1 = generateRandomTeam()
+    let team2 = generateRandomTeam()
+    while(team1.name === team2.name)team2 = generateRandomTeam()
+    return {
+        status,
+        score: status !==results.MatchPreparing ?`${Math.floor(Math.random() * 5)} : ${Math.floor(Math.random() * 5)}`: '0 : 0',
+        active: false, 
+        teams: [team1, team2]
+    }
+};

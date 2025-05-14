@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import Card from "../../../Features/Card/ui/Card";
 import './MenuPage.scss'
-import type { RootState } from "../../../App/providers/StoreProvider/config/store";
-import { Status } from "../../../App/providers/StoreProvider/config/Status/StatusTypes";
+import type { RootState } from "../../../App/providers/StoreProvider/index";
+import { Status } from "../../StatusWindow/index";
 
 export default function MenuPage() {
   const cards = useSelector((state: RootState) => state.cards.cards);
@@ -12,7 +12,7 @@ export default function MenuPage() {
   })
   return (
     <div className="menuPage">
-      {filteredCards.map((card, id) => (
+      {filteredCards.map((card, id: number) => (
          <Card 
           key={id}
           index={id}

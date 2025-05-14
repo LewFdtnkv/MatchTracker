@@ -3,9 +3,9 @@ import { CaretUpOutlined, CaretDownOutlined } from '@ant-design/icons';
 import '../../../App/ui/App.scss'
 import './StatusWindow.scss'
 import { useSelector, useDispatch } from "react-redux";
-import type { RootState } from "../../../App/providers/StoreProvider/config/store";
-import { handleChangeStatus } from "../../../App/providers/StoreProvider/config/Status/status";
-import { Status } from "../../../App/providers/StoreProvider/config/Status/StatusTypes";
+import type { RootState } from "../../../App/providers/StoreProvider/index";
+import { handleChangeStatus, Status} from "../index";
+
 
 export default function StatusWindow() {
     const status = useSelector((state: RootState)=>state.status.status);

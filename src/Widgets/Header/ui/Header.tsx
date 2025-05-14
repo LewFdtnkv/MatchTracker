@@ -1,6 +1,6 @@
-import Button from "../../Features/Button/Button";
-import RefreshWindow from "../RefreshWindow/RefreshWindow";
-import StatusWindow from "../StatusWindow/ui/StatusWindow";
+import Button from "../../../Shared/Button/ui/Button";
+import RefreshWindow from "../../../Shared/RefreshWindow/ui/RefreshWindow";
+import StatusWindow from "../../StatusWindow/ui/StatusWindow";
 import './Header.scss';
 
 export default function Header() {
@@ -8,7 +8,7 @@ export default function Header() {
         <header className="header">
             <div className="header-leftPart">
                 <img 
-                    src="src/Shared/MatchTracker.png" 
+                    src="src\Shared\assets\png\MatchTracker.png" 
                     alt="MatchTracker Logo" 
                     className="header-leftPart-img"
                 />

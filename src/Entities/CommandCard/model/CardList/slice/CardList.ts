@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import type { CardsState } from './CardListTypes';
-import { results } from '../../../../../Widgets/ResultWindow/ResultTypes';
-import {FetchData} from '../extraReducer/FetchData';
+import type { CardsState } from '../../../index';
+import{ results } from '../../../../../Shared/ResultWindow/index';
+import {FetchData} from '../../../../../App/providers/StoreProvider/index';
 
 const initialState: CardsState = {
   cards: [
@@ -78,7 +78,7 @@ const initialState: CardsState = {
   ]
 };
 
-const cardSlice = createSlice({
+export const cardSlice = createSlice({
   name: 'cards',
   initialState,
   reducers: {
@@ -94,7 +94,7 @@ const cardSlice = createSlice({
     .addCase(FetchData.fulfilled, (state, action)=>{
       state.cards.push(action.payload);
     })
-    .addCase(FetchData.rejected, (state, action)=>{
+    .addCase(FetchData.rejected, (_state, action)=>{
       console.error('Нет данных для добавления', action.error.message)
     })
   }

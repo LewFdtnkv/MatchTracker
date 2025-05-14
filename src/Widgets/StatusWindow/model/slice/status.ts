@@ -1,12 +1,12 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {Status} from './StatusTypes';
+import {Status} from '../../index';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
 const initialState = {
     status: Status.AllStatus
 };
 
-const statusSlice = createSlice({
+export const statusSlice = createSlice({
     name: 'status', 
     initialState,
     reducers:{
