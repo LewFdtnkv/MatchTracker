@@ -4,8 +4,8 @@ import '../../../App/ui/App.scss'
 import './StatusWindow.scss'
 import { useSelector, useDispatch } from "react-redux";
 import type { RootState } from "../../../App/providers/StoreProvider/index";
-import { handleChangeStatus, Status} from "../index";
-
+import { StatusEnum } from "../../model/index";
+import { handleChangeStatus }from '../../model/index'
 
 export default function StatusWindow() {
     const status = useSelector((state: RootState)=>state.status.status);
@@ -13,12 +13,12 @@ export default function StatusWindow() {
     const [active, setActive] = useState<boolean>(false);
 
     const getStatusValues = () => {
-        return Object.values(Status).filter(
+        return Object.values(StatusEnum).filter(
             (value) => typeof value === 'string'
-        ) as Status[];
+        ) as StatusEnum[];
     };
     
-    const toggleStatus = (newStatus: Status) => {
+    const toggleStatus = (newStatus: StatusEnum) => {
         dispatch(handleChangeStatus(newStatus));
     };
 

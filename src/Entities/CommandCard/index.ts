@@ -1,4 +1,4 @@
-
+export {default} from './ui/CommandCard'
 export type { 
     CommandCardProps,
     User,
@@ -8,11 +8,11 @@ export type {
 export {
     cardSlice, 
     handleChangeActive
-} from '../../Entities/CommandCard/model/CardList/slice/CardList';
+} from '../../Entities/model/CardList/slice/CardList';
 
 export type{
     Team,
     Card,
     CardsState,
     Player
-}from './model/CardList/types/CardListTypes';
+}from '../model/CardList/types/CardListTypes';

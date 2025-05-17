@@ -1,8 +1,8 @@
 import type { Team } from "../../../Entities/CommandCard/index";
-import type { results } from "../../../Shared/ResultWindow/index";
+import type { ResultEnum } from "../../../Features/ResultWindow/index";
 
 export interface CardProps {
-    status: results;
+    status: ResultEnum;
     score: string;
     active: boolean;
     teams: Team[];

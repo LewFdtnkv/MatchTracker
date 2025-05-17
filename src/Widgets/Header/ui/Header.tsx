@@ -1,6 +1,6 @@
-import Button from "../../../Shared/Button/ui/Button";
-import RefreshWindow from "../../../Shared/RefreshWindow/ui/RefreshWindow";
-import StatusWindow from "../../StatusWindow/ui/StatusWindow";
+import Button from "../../../Shared/Button/index";
+import RefreshWindow from "../../../Shared/RefreshWindow/index";
+import StatusWindow from "../../../Features/StatusWindow/index";
 import './Header.scss';
 
 export default function Header() {

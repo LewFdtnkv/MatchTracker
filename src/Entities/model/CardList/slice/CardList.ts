@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import type { CardsState } from '../../../index';
-import{ results } from '../../../../../Shared/ResultWindow/index';
-import {FetchData} from '../../../../../App/providers/StoreProvider/index';
+import type { CardsState } from '../types/CardListTypes';
+import{ ResultEnum } from '../../../../Features/ResultWindow/index';
+import {FetchData} from '../../../../App/providers/StoreProvider/index';
 
 const initialState: CardsState = {
   cards: [
     {
-      status: results.Live,
+      status: ResultEnum.Live,
       score: '2 : 3',
       active: false,
       teams: [
@@ -30,7 +30,7 @@ const initialState: CardsState = {
       ]
     },
     {
-      status: results.Finished,
+      status: ResultEnum.Finished,
       score: '2 : 4',
       active: false,
       teams: [
@@ -53,7 +53,7 @@ const initialState: CardsState = {
       ] 
     },
     {
-      status: results.MatchPreparing,
+      status: ResultEnum.MatchPreparing,
       score: '0 : 0',
       active: false,
       teams: [

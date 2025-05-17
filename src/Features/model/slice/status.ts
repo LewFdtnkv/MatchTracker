@@ -1,16 +1,16 @@
 import {createSlice} from '@reduxjs/toolkit';
-import {Status} from '../../index';
 import type { PayloadAction } from '@reduxjs/toolkit';
+import { StatusEnum } from '../types/StatusTypes';
 
 const initialState = {
-    status: Status.AllStatus
+    status: StatusEnum.AllStatus
 };
 
 export const statusSlice = createSlice({
     name: 'status', 
     initialState,
     reducers:{
-        handleChangeStatus(state, action: PayloadAction<Status>) {
+        handleChangeStatus(state, action: PayloadAction<StatusEnum>) {
             state.status = action.payload;
         }
     }

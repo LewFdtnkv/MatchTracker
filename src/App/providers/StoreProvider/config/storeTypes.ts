@@ -1,7 +1,10 @@
-import type { CardsState } from "../../../../Entities/CommandCard";
-import type { Status } from "../../../../Widgets/StatusWindow";
+import type { CardsState } from "../../../../Entities/CommandCard/index";
+import type { StatusEnum } from "../../../../Features/model/index";
 
 export interface RootState {
   cards: CardsState;
-  status: Status;
+  status:{
+    status: StatusEnum;
+  }
+  
 }

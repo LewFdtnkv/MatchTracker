@@ -1,14 +1,14 @@
 import { useSelector } from "react-redux";
-import Card from "../../../Features/Card/ui/Card";
+import Card from "../../../Features/Card/index";
 import './MenuPage.scss'
 import type { RootState } from "../../../App/providers/StoreProvider/index";
-import { Status } from "../../StatusWindow/index";
+import { StatusEnum } from "../../../Features/model/index";
 
 export default function MenuPage() {
   const cards = useSelector((state: RootState) => state.cards.cards);
   const status = useSelector((state: RootState)=>state.status.status);
   const filteredCards = cards.filter((card)=>{
-    return status === Status.AllStatus || card.status === status
+    return status === StatusEnum.AllStatus || card.status.toString() === status.toString();
   })
   return (
     <div className="menuPage">

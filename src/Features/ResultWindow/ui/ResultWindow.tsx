@@ -1,4 +1,4 @@
-import type{ResultWindowProps } from '../index';
+import type{ ResultWindowProps } from '../types/ResultTypes';
 import '../../../App/ui/App.scss'
 import './ResultWindow.scss'
 

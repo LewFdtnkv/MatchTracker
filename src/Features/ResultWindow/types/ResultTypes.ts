@@ -1,8 +1,8 @@
-export enum results{
+export enum ResultEnum{
     Live = 'Live',
     Finished = 'Finished',
     MatchPreparing = 'MatchPreparing'
 }
 export interface ResultWindowProps {
-    status: results;
+    status: ResultEnum;
   }

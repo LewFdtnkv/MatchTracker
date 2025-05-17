@@ -1,11 +1,11 @@
-import { results } from "../../../../../Shared/ResultWindow/index";
-import type { Card, Player, Team } from "../../../../../Entities/CommandCard/index";
+import { ResultEnum } from "../../../../Features/ResultWindow/index";
+import type { Card, Player, Team } from "../../../../Entities/CommandCard/index";
 
-const getRandomStatus = (): results => {
-  const statuses: results[] = [
-    results.Live,
-    results.Finished,
-    results.MatchPreparing,
+const getRandomStatus = (): ResultEnum => {
+  const statuses: ResultEnum[] = [
+    ResultEnum.Live,
+    ResultEnum.Finished,
+    ResultEnum.MatchPreparing,
   ];
   return statuses[Math.floor(Math.random() * statuses.length)];
 };
@@ -35,7 +35,7 @@ export const generateRandomCard = (): Card => {
     while(team1.name === team2.name)team2 = generateRandomTeam()
     return {
         status,
-        score: status !==results.MatchPreparing ?`${Math.floor(Math.random() * 5)} : ${Math.floor(Math.random() * 5)}`: '0 : 0',
+        score: status !==ResultEnum.MatchPreparing ?`${Math.floor(Math.random() * 5)} : ${Math.floor(Math.random() * 5)}`: '0 : 0',
         active: false, 
         teams: [team1, team2]
     }

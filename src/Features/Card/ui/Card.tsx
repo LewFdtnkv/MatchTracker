@@ -1,11 +1,11 @@
 import './Card.scss';
 import '../../../App/ui/App.scss';
 import { DownOutlined, UpOutlined } from '@ant-design/icons';
-import ResultWindow from '../../../Shared/ResultWindow/ui/ResultWindow';
-import CommandCard from '../../../Entities/CommandCard/ui/CommandCard';
+import ResultWindow from '../../ResultWindow/index';
+import CommandCard from '../../../Entities/CommandCard/index';
 import { useDispatch } from 'react-redux';
 import { handleChangeActive } from '../../../Entities/CommandCard/index';
-import type { CardProps } from '../index';
+import type { CardProps } from '../types/CardTypes';
 
 
 

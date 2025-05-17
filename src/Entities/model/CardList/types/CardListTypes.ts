@@ -1,4 +1,4 @@
-import type { results } from "../../../../../Shared/ResultWindow/index"
+import type { ResultEnum } from "../../../../Features/ResultWindow/index"
 export interface Player {
     name: string;
     kills: number;
@@ -14,7 +14,7 @@ export interface Player {
   }
   
   export interface Card {
-    status: results;
+    status: ResultEnum;
     score: string;
     active: boolean;
     teams: Team[];

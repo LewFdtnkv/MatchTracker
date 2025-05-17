@@ -1,13 +1,9 @@
-
-
-
-
 export type{AppDispatch}from './config/store';
 
 export {
     generateRandomCard
-}from './api/extrareducer/Sample'
+}from './api/Sample'
 export { 
     FetchData
-}from './api/extrareducer/FetchData';
+}from './api/FetchData';
 export type{RootState}from './config/storeTypes';
